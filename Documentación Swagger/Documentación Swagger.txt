@@ -1,0 +1,92 @@
+PRODDUCTOS
+---------------------------------------------------------------
+
+Agregar/modificar un producto
+METHOD: POST/PUT
+EndPoint: http://localhost:8083/api-app/producto
+           http://localhost:8083/api-app/producto/{productoId}
+
+###
+[
+  {
+    "nombre": "Cámara Digital",
+    "descripcion": "Cámara de alta resolución con lente intercambiable.",
+    "imagen": "https://example.com/imagen1.jpg",
+    "stock": 15,
+    "precio": 350.99
+  },
+  {
+    "nombre": "Laptop Gaming",
+    "descripcion": "Laptop potente con GPU dedicada y pantalla de 144Hz.",
+    "imagen": "https://example.com/imagen1.jpg",
+    "stock": 8,
+    "precio": 1200.00
+  },
+  {
+    "nombre": "Teléfono Inteligente",
+    "descripcion": "Smartphone con pantalla AMOLED y cámara cuádruple.",
+    "imagen": "https://example.com/imagen1.jpg",
+    "stock": 25,
+    "precio": 699.99
+  },
+  {
+    "nombre": "Auriculares Bluetooth",
+    "descripcion": "Auriculares inalámbricos con cancelación de ruido.",
+    "imagen": "https://example.com/imagen1.jpg",
+    "stock": 30,
+    "precio": 150.50
+  },
+  {
+    "nombre": "Monitor 4K",
+    "descripcion": "Monitor UHD de 27 pulgadas con tecnología IPS.",
+    "imagen": "https://example.com/imagen1.jpg",
+    "stock": 10,
+    "precio": 400.00
+  }
+]
+###
+
+Consultar un producto por su nombre:
+Method: GET
+EndPoint: http://localhost:8083/api-app/producto/{nombreProducto}
+
+Eliminar un producto:
+Method: DELETE
+EndPoint: http://localhost:8083/api-app/producto/{productoId}
+
+---------------------------------------------------------------
+
+ORDEN
+---------------------------------------------------------------
+
+Agregar/modificar una orden
+METHOD: POST/PUT
+EndPoint: http://localhost:8083/api-app/orden/{ordenId}
+
+###
+{
+  "id": 1,
+  "producto": {
+    "id": 1,
+  },
+  "orden": {
+    "id": 101,
+  },
+  "cantidad": 2,
+  "precioUnidad": 350.99,
+  "subtotal": 701.98
+}
+###
+
+Consultar una orden por su ID:
+Method: GET
+EndPoint: http://localhost:8083/api-app/orden/{ordenId}
+
+Eliminar una orden:
+Method: DELETE
+EndPoint: http://localhost:8083/api-app/orden/{ordenId}
+
+---------------------------------------------------------------
+
+¡IMPORTANTE!
+Para una documentación detallada de la API, ingresa a http://localhost:8083/swagger-ui/index.html, donde podrás ver una versión más interactiva y específica.
